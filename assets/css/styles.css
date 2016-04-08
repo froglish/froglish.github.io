@@ -90,35 +90,57 @@ body {
   color: #3C8BC6;
 }
 
-.article .article-cta-buy {
-  border: 1px solid #C4C3C3;
+.article .article-like {
   display: inline-block;
-  height: 36px;
-  border-radius: 18px;
-  padding: 0 25px 0 50px;
+  height: 23px;
+  line-height: 19px;
+  color: #E23534;
+  font-style: italic;
+  text-align: left;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 10px;
+}
+
+.article .article-like .article-like-img {
+  display: block;
+  height: 28px;
+  width: 28px;
+  background-image: url(../img/coeur-vide.svg);
   background-repeat: no-repeat;
-  background-image: url(../img/panier.svg);
-  background-size: 33px;
-  background-position: 11px 6px;
-  color: #000000;
-  font-size: 12px;
-  line-height: 18px;
-  text-decoration: none;
+  background-position: center;
+  background-size: 23px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.article .article-cta-buy:hover {
-  border-color: #156FBB;
-  color: #156FBB;
+.article .article-like:hover {
+  cursor: pointer;
 }
 
-.article .article-cta-buy span {
-  display: block;
+.article .article-like.liked .article-like-img {
+  background-image: url(../img/coeur-plein.svg);
+  animation-duration: 1s;
+  animation-name: slidein;
 }
 
-.article .article-cta-buy img {
-  height: 12px;
-  border: none;
-  display: block;
+.article .article-like span {
+  line-height: 26px;
+}
+
+@keyframes slidein {
+  from {
+    background-size: 23px;
+  }
+
+  50% {
+    background-size: 28px;
+  }
+
+  to {
+    background-size: 23px;
+  }
 }
 
 /******** Intéressé ********/
